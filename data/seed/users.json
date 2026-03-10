@@ -1,0 +1,111 @@
+[
+  {
+    "id": "user-001",
+    "email": "demo@autostack.com",
+    "password": "$2a$10$eLTE.2EIttvwXEG3cNc9c.fZmt5km2cO5JmYvUAll.DuobqcS.hQW",
+    "name": "Demo User",
+    "country": "US",
+    "preferredCurrency": "USD",
+    "roles": ["user"],
+    "preferences": {
+      "priceRange": [20000, 60000],
+      "vehicleTypes": ["sedan", "suv"]
+    },
+    "createdAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "user-002",
+    "email": "admin@autostack.com",
+    "password": "$2a$10$eLTE.2EIttvwXEG3cNc9c.fZmt5km2cO5JmYvUAll.DuobqcS.hQW",
+    "name": "Admin User",
+    "country": "US",
+    "preferredCurrency": "USD",
+    "roles": ["user", "admin"],
+    "preferences": {},
+    "createdAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "user-003",
+    "email": "james.smith@autostack.co.uk",
+    "password": "$2a$10$eLTE.2EIttvwXEG3cNc9c.fZmt5km2cO5JmYvUAll.DuobqcS.hQW",
+    "name": "James Smith",
+    "country": "GB",
+    "preferredCurrency": "GBP",
+    "roles": ["user"],
+    "preferences": {
+      "priceRange": [15000, 50000],
+      "vehicleTypes": ["sedan", "hatchback"]
+    },
+    "createdAt": "2024-01-05T00:00:00Z"
+  },
+  {
+    "id": "user-004",
+    "email": "hans.mueller@autostack.de",
+    "password": "$2a$10$eLTE.2EIttvwXEG3cNc9c.fZmt5km2cO5JmYvUAll.DuobqcS.hQW",
+    "name": "Hans Müller",
+    "country": "DE",
+    "preferredCurrency": "EUR",
+    "roles": ["user"],
+    "preferences": {
+      "priceRange": [25000, 70000],
+      "vehicleTypes": ["sedan", "suv"]
+    },
+    "createdAt": "2024-01-03T00:00:00Z"
+  },
+  {
+    "id": "user-005",
+    "email": "emma.tremblay@autostack.ca",
+    "password": "$2a$10$eLTE.2EIttvwXEG3cNc9c.fZmt5km2cO5JmYvUAll.DuobqcS.hQW",
+    "name": "Emma Tremblay",
+    "country": "CA",
+    "preferredCurrency": "CAD",
+    "roles": ["user"],
+    "preferences": {
+      "priceRange": [30000, 80000],
+      "vehicleTypes": ["truck", "suv"]
+    },
+    "createdAt": "2024-01-07T00:00:00Z"
+  },
+  {
+    "id": "user-006",
+    "email": "liam.wilson@autostack.com.au",
+    "password": "$2a$10$eLTE.2EIttvwXEG3cNc9c.fZmt5km2cO5JmYvUAll.DuobqcS.hQW",
+    "name": "Liam Wilson",
+    "country": "AU",
+    "preferredCurrency": "AUD",
+    "roles": ["user"],
+    "preferences": {
+      "priceRange": [40000, 90000],
+      "vehicleTypes": ["suv", "truck"]
+    },
+    "createdAt": "2024-01-02T00:00:00Z"
+  },
+  {
+    "id": "user-007",
+    "email": "sophie.dubois@autostack.fr",
+    "password": "$2a$10$eLTE.2EIttvwXEG3cNc9c.fZmt5km2cO5JmYvUAll.DuobqcS.hQW",
+    "name": "Sophie Dubois",
+    "country": "FR",
+    "preferredCurrency": "EUR",
+    "roles": ["user"],
+    "preferences": {
+      "priceRange": [20000, 55000],
+      "vehicleTypes": ["hatchback", "suv"]
+    },
+    "createdAt": "2024-01-09T00:00:00Z"
+  },
+  {
+    "id": "user-008",
+    "email": "sarah.jones@autostack.com",
+    "password": "$2a$10$eLTE.2EIttvwXEG3cNc9c.fZmt5km2cO5JmYvUAll.DuobqcS.hQW",
+    "name": "Sarah Jones",
+    "country": "US",
+    "preferredCurrency": "USD",
+    "roles": ["user"],
+    "preferences": {
+      "priceRange": [35000, 75000],
+      "vehicleTypes": ["suv", "sedan"]
+    },
+    "createdAt": "2024-01-04T00:00:00Z"
+  }
+]

@@ -1,0 +1,92 @@
+# -- Container image
+image:
+  repository: gururepservice/autostack-api-inventory
+  tag: latest
+  pullPolicy: IfNotPresent
+
+# -- Replica count
+replicaCount: 1
+
+# -- No ingress for this API service (accessed via UI proxy)
+ingress:
+  enabled: false
+
+# -- Service details (ClusterIP only)
+service:
+  type: ClusterIP
+  port: 8001
+  annotations: {}
+
+# -- Pod labels/annotations
+podLabels: {}
+podAnnotations: {}
+
+# -- Resources
+resources:
+  requests:
+    cpu: 50m
+    memory: 64Mi
+  limits:
+    cpu: 200m
+    memory: 256Mi
+
+# -- Probes (AutoStack APIs expose /health endpoint)
+probes:
+  liveness:
+    path: /health
+    initialDelaySeconds: 5
+    periodSeconds: 10
+    timeoutSeconds: 2
+    failureThreshold: 3
+  readiness:
+    path: /health
+    initialDelaySeconds: 5
+    periodSeconds: 5
+    timeoutSeconds: 2
+    failureThreshold: 12
+
+# -- ServiceAccount (optional)
+serviceAccount:
+  create: false
+  name: ""
+  annotations: {}
+
+# -- SecurityContext (optional)
+podSecurityContext: {}
+securityContext: {}
+
+# --- Feature Management (CloudBees FM) ---
+featureFlags:
+  enabled: false
+  secretName: autostack-api-inventory-fmkey
+  secretKey: FM_KEY
+  mountPath: /app/config
+  fileName: fm.json
+  createSecret: true
+  # Namespace prefix for CloudBees FM flags
+  namespace: autostack.inventory
+
+# --- Security ---
+security:
+  createSecret: false
+  existingSecret: ""
+  secretName: autostack-api-inventory-secrets
+  jwtSecret: ""
+
+# -- Environment variables (provided by workflow or override)
+env: []
+#  - name: DATA_PATH
+#    value: /app/data/seed
+#  - name: PORT
+#    value: "8001"
+#  - name: LOG_LEVEL
+#    value: info
+
+# -- Node selector
+nodeSelector: {}
+
+# -- Tolerations
+tolerations: []
+
+# -- Affinity
+affinity: {}

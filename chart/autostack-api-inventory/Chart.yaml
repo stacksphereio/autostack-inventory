@@ -1,0 +1,6 @@
+apiVersion: v2
+name: autostack-api-inventory
+description: AutoStack Inventory API - Vehicle inventory management and search
+type: application
+version: 0.1.0
+appVersion: "1.0.0"
