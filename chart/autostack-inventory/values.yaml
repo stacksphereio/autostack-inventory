@@ -1,6 +1,6 @@
 # -- Container image
 image:
-  repository: gururepservice/autostack-api-inventory
+  repository: gururepservice/autostack-inventory
   tag: latest
   pullPolicy: IfNotPresent
 
@@ -58,7 +58,7 @@ securityContext: {}
 # --- Feature Management (CloudBees FM) ---
 featureFlags:
   enabled: false
-  secretName: autostack-api-inventory-fmkey
+  secretName: autostack-inventory-fmkey
   secretKey: FM_KEY
   mountPath: /app/config
   fileName: fm.json
@@ -70,7 +70,7 @@ featureFlags:
 security:
   createSecret: false
   existingSecret: ""
-  secretName: autostack-api-inventory-secrets
+  secretName: autostack-inventory-secrets
   jwtSecret: ""
 
 # -- Environment variables (provided by workflow or override)

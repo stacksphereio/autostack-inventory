@@ -24,14 +24,14 @@ clean: ## Clean build artifacts
 
 docker-build: ## Build Docker image
 	@echo "Building Docker image..."
-	docker build -t autostack-api-inventory:latest .
+	docker build -t autostack-inventory:latest .
 
 docker-run: ## Run Docker container
 	@echo "Running Docker container..."
 	docker run -p 8001:8001 \
 		-e DATA_PATH=/app/data/seed \
 		-v $(PWD)/../../data/seed:/app/data/seed:ro \
-		autostack-api-inventory:latest
+		autostack-inventory:latest
 
 deps: ## Download dependencies
 	@echo "Downloading dependencies..."

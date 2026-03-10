@@ -1,4 +1,4 @@
-# autostack-api-inventory
+# autostack-inventory
 
 AutoStack Inventory API - Vehicle inventory management and search service.
 
@@ -6,7 +6,7 @@ Part of the AutoStack application family in StackSphere.
 
 ## Overview
 
-The `autostack-api-inventory` service provides:
+The `autostack-inventory` service provides:
 - Vehicle inventory listing and search
 - Multi-country vehicle data (US, GB, DE, CA, AU)
 - Multi-currency support (USD, GBP, EUR, CAD, AUD)
@@ -55,18 +55,18 @@ PORT=8001 DATA_PATH=./data/seed ./server
 
 ```bash
 # Build image
-docker build -t autostack-api-inventory:local .
+docker build -t autostack-inventory:local .
 
 # Run container
-docker run -p 8001:8001 autostack-api-inventory:local
+docker run -p 8001:8001 autostack-inventory:local
 ```
 
 ## Deployment
 
 This component uses the StackSphere repo-per-component model:
 
-- **Workflows:** `.cloudbees/workflows/autostack-api-inventory-ci.yaml`
-- **Helm Chart:** `chart/autostack-api-inventory/`
+- **Workflows:** `.cloudbees/workflows/autostack-inventory-ci.yaml`
+- **Helm Chart:** `chart/autostack-inventory/`
 - **Reusable Workflows:** References `stacksphereio/core-workflows`
 
 ### Deployment Environments
@@ -117,7 +117,7 @@ Pipeline stages:
 
 ## Related Components
 
-- **autostack-api-valuations** - Vehicle valuation service
+- **autostack-valuations** - Vehicle valuation service
 - **autostack-web** - React UI frontend
 
 ## Stack

@@ -1,10 +1,10 @@
-# StackSphere autostack-api-inventory CI Pipeline
+# StackSphere autostack-inventory CI Pipeline
 # ARCH VERSION: 0.5
 # Purpose: Automated CI/CD with dev/integ deployment
 
 apiVersion: automation.cloudbees.io/v1alpha1
 kind: workflow
-name: autostack-api-inventory CI
+name: autostack-inventory CI
 
 permissions:
   scm-token-own: read
@@ -27,7 +27,7 @@ jobs:
   test:
     uses: github.com/stacksphereio/core-workflows/.cloudbees/workflows/component-test.yaml@main
     with:
-      component_name: autostack-api-inventory
+      component_name: autostack-inventory
       language: go
       enable_smart_tests: "true"
     secrets: inherit
@@ -37,7 +37,7 @@ jobs:
     needs: test
     uses: github.com/stacksphereio/core-workflows/.cloudbees/workflows/component-build.yaml@main
     with:
-      component_name: autostack-api-inventory
+      component_name: autostack-inventory
       docker_user: ${{ vars.DOCKER_USER }}
       commit_sha: ${{ cloudbees.scm.sha }}
       push_latest: "true"
@@ -51,11 +51,11 @@ jobs:
     environment: dev
     uses: github.com/stacksphereio/core-workflows/.cloudbees/workflows/component-deploy.yaml@main
     with:
-      component_name: autostack-api-inventory
+      component_name: autostack-inventory
       version: ${{ needs.build.outputs.VERSION }}
       environment: dev
       stack_name: autostack
-      docker_repo: ${{ vars.DOCKER_USER }}/autostack-api-inventory
+      docker_repo: ${{ vars.DOCKER_USER }}/autostack-inventory
       artifact_id: ${{ needs.build.outputs.PRIMARY_ARTIFACT_ID }}
       commit_sha: ${{ cloudbees.scm.sha }}
       database_mode: "no-database"
@@ -70,11 +70,11 @@ jobs:
     environment: integ
     uses: github.com/stacksphereio/core-workflows/.cloudbees/workflows/component-deploy.yaml@main
     with:
-      component_name: autostack-api-inventory
+      component_name: autostack-inventory
       version: ${{ needs.build.outputs.VERSION }}
       environment: integ
       stack_name: autostack
-      docker_repo: ${{ vars.DOCKER_USER }}/autostack-api-inventory
+      docker_repo: ${{ vars.DOCKER_USER }}/autostack-inventory
       artifact_id: ${{ needs.build.outputs.PRIMARY_ARTIFACT_ID }}
       commit_sha: ${{ cloudbees.scm.sha }}
       database_mode: "no-database"
