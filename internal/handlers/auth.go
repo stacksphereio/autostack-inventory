@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/CB-AutoStack/AutoStack/apps/api-inventory/internal/auth"
-	"github.com/CB-AutoStack/AutoStack/apps/api-inventory/internal/repository"
+	"autostack-inventory/internal/auth"
+	"autostack-inventory/internal/repository"
 	"github.com/sirupsen/logrus"
 	"golang.org/x/crypto/bcrypt"
 )

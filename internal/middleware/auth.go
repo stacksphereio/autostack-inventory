@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/CB-AutoStack/AutoStack/apps/api-inventory/internal/auth"
+	"autostack-inventory/internal/auth"
 	"github.com/sirupsen/logrus"
 )
 

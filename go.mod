@@ -1,4 +1,4 @@
-module github.com/CB-AutoStack/AutoStack/apps/api-inventory
+module autostack-inventory
 
 go 1.21
 

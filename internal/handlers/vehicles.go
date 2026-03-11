@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/CB-AutoStack/AutoStack/apps/api-inventory/internal/models"
-	"github.com/CB-AutoStack/AutoStack/apps/api-inventory/internal/repository"
+	"autostack-inventory/internal/models"
+	"autostack-inventory/internal/repository"
 	"github.com/gorilla/mux"
 	"github.com/sirupsen/logrus"
 )

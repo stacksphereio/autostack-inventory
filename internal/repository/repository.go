@@ -8,7 +8,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/CB-AutoStack/AutoStack/apps/api-inventory/internal/models"
+	"autostack-inventory/internal/models"
 	"github.com/sirupsen/logrus"
 )
 
