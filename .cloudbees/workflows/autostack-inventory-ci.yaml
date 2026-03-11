@@ -42,6 +42,7 @@ jobs:
       commit_sha: ${{ cloudbees.scm.sha }}
       push_latest: "true"
       debug: "true"
+      upload_tarball: "false"  # Workaround for CBP-34749 (HTTP 500 in post-build-asset-binary)
     secrets: inherit
     vars: inherit
 
